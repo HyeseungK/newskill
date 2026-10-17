@@ -130,7 +130,6 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-si
     <span class="pill">v1.5 · 2026-10-18</span><span class="pill">SKILL.md는 레포의 *-SKILL.md를 사용</span>
   </div>
   <div class="actions">
-    <button class="primary" data-copy="skill">SKILL.md 복사</button>
     <button id="theme">다크 / 라이트</button>
   </div>
 </header>
@@ -507,7 +506,7 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-si
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(s).then(done,fb)}else fb();
     function fb(){var ta=document.createElement('textarea');ta.value=s;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();done()}
   }
-  document.querySelector('[data-copy="skill"]').addEventListener('click',function(){copy(FRONT+'# 개념 리서치 브리프\n'+text('skill'))});
+  
   var root=document.documentElement;
   try{var sv=localStorage.getItem('theme'); if(sv) root.setAttribute('data-theme',sv)}catch(e){}
   document.getElementById('theme').addEventListener('click',function(){
